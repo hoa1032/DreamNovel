@@ -25,13 +25,15 @@
     <div style="margin-bottom: 10px;"></div>
 
     私の愛刀は
-    <option value="">-- 刀剣男士選択 --</option>
-    <option value="kara">大倶利伽羅</option>
-    <option value="goke">後家兼光</option>
-    <option value="turu">鶴丸</option>
-    <option value="mituyo">大典太</option>
-    <option value="tagen">薬研</option>
-    <option value="hudo">不動</option>
+    <select id="characterSelect" onchange="showSerif()">
+        <option value="">-- 刀剣男士選択 --</option>
+        <option value="kara">大倶利伽羅</option>
+        <option value="goke">後家兼光</option>
+        <option value="turu">鶴丸</option>
+        <option value="mituyo">大典太</option>
+        <option value="tagen">薬研</option>
+        <option value="hudo">不動</option>
+    </select>
 
     <div style="margin-bottom: 10px;"></div>
 
@@ -49,9 +51,11 @@
     <input type="text" id="menuName" placeholder="オムライス" oninput="showSerif()">
     <!-- 作者は焼肉が好きですが乙女メニューの方が適していると思います。 -->
 
-    <!--イチャイチャ描写選択
-    <option value="deep">濃厚でも大丈夫</option>
-    <option value="light">ライトな方が好き</option>-->
+    イチャイチャ描写選択
+    <select id="sensitiveSelect" onchange="showSerif()">
+        <option value="deep">濃厚でも大丈夫</option>
+        <option value="light">ライトな方が好き</option>
+    </select>
 
     <div style="margin-bottom: 10px;"></div>
 
@@ -64,7 +68,7 @@
     <script>
         function showSerif() {
             const selectCharacter = document.getElementById("characterSelect");
-            const selectSensitive = document.getElementById("SensitiveSelect");
+            const selectSensitive = document.getElementById("sensitiveSelect");
 
             const danshiInput = document.getElementById("danshiName");
             const userInput = document.getElementById("userName");

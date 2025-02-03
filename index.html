@@ -51,6 +51,8 @@
     <input type="text" id="menuName" placeholder="オムライス" oninput="showSerif()">
     <!-- 作者は焼肉が好きですが乙女メニューの方が適していると思います。 -->
 
+    <div style="margin-bottom: 10px;"></div>
+
     イチャイチャ描写選択
     <select id="sensitiveSelect" onchange="showSerif()">
         <option value="deep">濃厚でも大丈夫</option>
@@ -58,10 +60,6 @@
     </select>
 
     <div style="margin-bottom: 10px;"></div>
-
-
-    </select>
-
 
     <p id="serif"></p>
 
@@ -76,23 +74,24 @@
 
             const serifBox = document.getElementById("serif");
 
-            const selectedValue = selectCharacter.value;
-            const danshiName = nameInput.value || "だーりん";
-            const userName = nameInput.value || "あるじ";
-            const menuName = nameInput.value || "オムライス";
+            const selectedCharacter = selectCharacter.value;
+            const selectedSensitive = selectSensitive.value;
+            const danshiName = danshiInput.value || "だーりん";
+            const userName = userInput.value || "あるじ";
+            const menuName = menuInput.value || "オムライス";
 
             // キャラクターごとの文章
             const serifs = {
                 "kara": `${userName}、馴れ合うつもりはない。`,
-                "goke": `後家兼光`,
-                "turu": `よっ`,
-                "mituyo": `あぁ`,
-                "tagen": `大将`,
-                "hudo": `主！`,
+                "goke": `後家兼光「${userName}、今日も素敵だね。」`,
+                "turu": `鶴丸「よっ、${userName}！驚いたか？」`,
+                "mituyo": `大典太「あぁ、${userName}……。」`,
+                "tagen": `薬研「大将、今日の晩飯は${menuName}か？」`,
+                "hudo": `不動「主！${menuName}を食べたら、一緒に酒でも飲むか？」`,
             };
 
             // 選択されたキャラクターのセリフを表示（選択なしなら空）
-            serifBox.textContent = serifs[selectedValue] || "";
+            serifBox.textContent = serifs[selectedCharacter] || "";
         }
     </script>
 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HP_Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #serif {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+●夢設定●
+
+私の愛刀は
+        <option value="">-- 刀剣男士選択 --</option>
+        <option value="pekora">後家兼光</option>
+        <option value="marine">鶴丸</option>
+        <option value="noel">大典太</option>
+        <option value="noel">薬研</option>
+        <option value="noel">不動</option>
+
+大倶利伽羅をなんと呼んでいますか？
+「」
+
+大倶利伽羅になんと呼ばれていますか？
+
+あなたの好きなメニューは？
+「ハンバーグ」
+    あなたのお名前は？
+    <!-- 名前入力 -->
+    <input type="text" id="userName" placeholder="名前を入力" oninput="showSerif()">
+
+    <div style="margin-bottom: 10px;"></div>
+
+    
+    </select>
+
+
+    <p id="serif"></p>
+
+    <script>
+        function showSerif() {
+            const selectBox = document.getElementById("characterSelect");
+            const nameInput = document.getElementById("userName");
+            const serifBox = document.getElementById("serif");
+
+            const selectedValue = selectBox.value;
+            const userName = nameInput.value || "あなた"; // 名前が未入力の場合は「あなた」
+
+            // キャラクターごとのセリフ（◯◯を入力名に置き換える）
+            const serifs = {
+                "pekora": `${userName}、こんぺこ〜！`,
+                "marine": `Ahoy！${userName}くん`,
+                "noel": `こんマッスル〜！${userName}さん`
+            };
+
+            // 選択されたキャラクターのセリフを表示（選択なしなら空）
+            serifBox.textContent = serifs[selectedValue] || "";
+        }
+    </script>
+
+</body>
+
+</html>

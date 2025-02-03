@@ -20,30 +20,42 @@
 </head>
 
 <body>
-●夢設定●
-
-私の愛刀は
-        <option value="">-- 刀剣男士選択 --</option>
-        <option value="pekora">後家兼光</option>
-        <option value="marine">鶴丸</option>
-        <option value="noel">大典太</option>
-        <option value="noel">薬研</option>
-        <option value="noel">不動</option>
-
-大倶利伽羅をなんと呼んでいますか？
-「」
-
-大倶利伽羅になんと呼ばれていますか？
-
-あなたの好きなメニューは？
-「ハンバーグ」
-    あなたのお名前は？
-    <!-- 名前入力 -->
-    <input type="text" id="userName" placeholder="名前を入力" oninput="showSerif()">
+    ●カスタム夢設定●
 
     <div style="margin-bottom: 10px;"></div>
 
-    
+    私の愛刀は
+    <option value="">-- 刀剣男士選択 --</option>
+    <option value="kara">大倶利伽羅</option>
+    <option value="goke">後家兼光</option>
+    <option value="turu">鶴丸</option>
+    <option value="mituyo">大典太</option>
+    <option value="tagen">薬研</option>
+    <option value="hudo">不動</option>
+
+    <div style="margin-bottom: 10px;"></div>
+
+    彼の呼び方
+    <input type="text" id="danshiName" placeholder="だーりん" oninput="showSerif()">
+
+    <div style="margin-bottom: 10px;"></div>
+
+    彼からの呼ばれ方
+    <input type="text" id="userName" placeholder="あるじ" oninput="showSerif()">
+
+    <div style="margin-bottom: 10px;"></div>
+
+    好きなお夕飯のメニューは？
+    <input type="text" id="menuName" placeholder="オムライス" oninput="showSerif()">
+    <!-- 作者は焼肉が好きですが乙女メニューの方が適していると思います。 -->
+
+    イチャイチャ描写選択
+    <option value="deep">濃厚でも大丈夫</option>
+    <option value="light">ライトな方が好き</option>
+
+    <div style="margin-bottom: 10px;"></div>
+
+
     </select>
 
 
@@ -51,18 +63,28 @@
 
     <script>
         function showSerif() {
-            const selectBox = document.getElementById("characterSelect");
-            const nameInput = document.getElementById("userName");
+            const selectCharacter = document.getElementById("characterSelect");
+            const selectSensitive = document.getElementById("SensitiveSelect");
+
+            const danshiInput = document.getElementById("danshiName");
+            const userInput = document.getElementById("userName");
+            const menuInput = document.getElementById("menuName");
+
             const serifBox = document.getElementById("serif");
 
-            const selectedValue = selectBox.value;
-            const userName = nameInput.value || "あなた"; // 名前が未入力の場合は「あなた」
+            const selectedValue = selectCharacter.value;
+            const danshiName = nameInput.value || "だーりん";
+            const userName = nameInput.value || "あるじ";
+            const menuName = nameInput.value || "オムライス";
 
-            // キャラクターごとのセリフ（◯◯を入力名に置き換える）
+            // キャラクターごとの文章
             const serifs = {
-                "pekora": `${userName}、こんぺこ〜！`,
-                "marine": `Ahoy！${userName}くん`,
-                "noel": `こんマッスル〜！${userName}さん`
+                "kara": `${userName}、馴れ合うつもりはない。`,
+                "goke": `後家兼光`,
+                "turu": `よっ`,
+                "mituyo": `あぁ`,
+                "tagen": `大将`,
+                "hudo": `主！`,
             };
 
             // 選択されたキャラクターのセリフを表示（選択なしなら空）

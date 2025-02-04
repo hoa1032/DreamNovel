@@ -19,47 +19,48 @@
     </style>
 </head>
 
+ꕤカスタム夢設定ꕤ
+
+<div style="margin-bottom: 10px;"></div>
+
+<div>私の愛刀は</div>
+<select id="characterSelect" onchange="showSerif()">
+    <option value="">-- 刀剣男士選択 --</option>
+    <option value="kara">大倶利伽羅</option>
+    <option value="goke">後家兼光</option>
+    <option value="turu">鶴丸</option>
+    <option value="mituyo">大典太</option>
+    <option value="tagen">薬研</option>
+    <option value="hudo">不動</option>
+</select>
+
+<div style="margin-bottom: 10px;"></div>
+
+<div>彼の呼び方</div>
+<input type="text" id="danshiName" placeholder="だーりん" oninput="showSerif()">
+
+<div style="margin-bottom: 10px;"></div>
+
+<div>彼からの呼ばれ方</div>
+<input type="text" id="userName" placeholder="あるじ" oninput="showSerif()">
+
+<div style="margin-bottom: 10px;"></div>
+
+<div>好きなお夕飯のメニューは？</div>
+<input type="text" id="menuName" placeholder="オムライス" oninput="showSerif()">
+<!-- 作者は焼肉が好きですが乙女メニューの方が適していると思います。 -->
+
+<div style="margin-bottom: 10px;"></div>
+
+<div>イチャイチャ描写選択</div>
+<select id="sensitiveSelect" onchange="showSerif()">
+    <option value="deep">濃厚でも大丈夫</option>
+    <option value="light">ライトな方が好き</option>
+</select>
+
+<div style="margin-bottom: 10px;"></div>
+
 <body>
-    ●カスタム夢設定●
-
-    <div style="margin-bottom: 10px;"></div>
-
-    <div>私の愛刀は</div>
-    <select id="characterSelect" onchange="showSerif()">
-        <option value="">-- 刀剣男士選択 --</option>
-        <option value="kara">大倶利伽羅</option>
-        <option value="goke">後家兼光</option>
-        <option value="turu">鶴丸</option>
-        <option value="mituyo">大典太</option>
-        <option value="tagen">薬研</option>
-        <option value="hudo">不動</option>
-    </select>
-
-    <div style="margin-bottom: 10px;"></div>
-
-    <div>彼の呼び方</div>
-    <input type="text" id="danshiName" placeholder="だーりん" oninput="showSerif()">
-
-    <div style="margin-bottom: 10px;"></div>
-
-    <div>彼からの呼ばれ方</div>
-    <input type="text" id="userName" placeholder="あるじ" oninput="showSerif()">
-
-    <div style="margin-bottom: 10px;"></div>
-
-    <div>好きなお夕飯のメニューは？</div>
-    <input type="text" id="menuName" placeholder="オムライス" oninput="showSerif()">
-    <!-- 作者は焼肉が好きですが乙女メニューの方が適していると思います。 -->
-
-    <div style="margin-bottom: 10px;"></div>
-
-    <div>イチャイチャ描写選択</div>
-    <select id="sensitiveSelect" onchange="showSerif()">
-        <option value="deep">濃厚でも大丈夫</option>
-        <option value="light">ライトな方が好き</option>
-    </select>
-
-    <div style="margin-bottom: 10px;"></div>
 
     <p id="serif"></p>
 
@@ -97,27 +98,25 @@
 
     <div style="margin-bottom: 10px;"></div>
 
-    ●このサイトの作り方●
-    <div style="margin-bottom: 8px;"></div>
-    <p font-size: 12px>
-    <div>
-        HTML、CSS、Javascriptで書いたコードをGithubのPagesで公開しています。
-    </div>
-    <div>
-        プログラミング勉強中の初心者なので、細かい解説や作成のご相談等はお受け致しかねますが。
-    </div>
-    <div>
-        オープンソース（先輩エンジニアさんたちの便利作品を無料で使わせていただける文化）に救われてきたので、当サイトのコードを参考にご自身のサイトをご作成いただいてOKです（動作の保証は致しかねます）（※自己責任でご利用ください）（一切の責任を負いかねます）（二次創作の場合は各公式様のガイドラインに合わせてご利用ください）。
-    </div>
-    <div>
-        当サイトのコードを9割以上引用した場合のみ、参照元や出典等として弊サークルの名前を明記ください。ご自身で改良いただいた場合は任意です。
-    </div>
-    <div style="margin-bottom: 10px;"></div>
-    皆さまが素敵な夢活をエンジョイできますように！
-    <div style="margin-bottom: 10px;"></div>
-    2025.2.3&emsp;サークル「夢恋万華鏡」
-    <div style="margin-bottom: 10px;"></div>
-    </p>
 </body>
+
+ꕤこのサイトの作り方ꕤ
+<div style="margin-bottom: 6px;"></div>
+<p font-size: 12px>
+<div>
+    HTML、CSS、JavaScriptをGitHubのPagesで公開しています。
+</div>
+<div>
+    プログラミング勉強中の初心者なので、細かい解説や作成のご相談等はお受け致しかねますが。私もオープンソース（先輩エンジニアさんたちの便利な作品を無料で使わせていただける文化）に救われてきたので、当サイトのコード（Ctrl+U（Windows）または⌘-Option-U（Mac）で表示のようです）を参考にご自身のサイトをお作りいただいてOKです（動作の保証は致しかねます）（※自己責任でご利用ください）（一切の責任を負いかねます）（二次創作の場合は各公式様のガイドラインに合わせてご利用ください）。自分用のため拙い箇所が多いと思いますので適宜改良ください。
+</div>
+<div>
+    参照元として弊サークル名の明記は任意（必須ではない）ですが、𝕏や当サイトのURL付きでご紹介いただけるとモチベが上がります。
+</div>
+<div style="margin-bottom: 10px;"></div>
+皆さまが素敵な夢活をエンジョイできますように！
+<div style="margin-bottom: 10px;"></div>
+2025.2.3&emsp;サークル「夢恋万華鏡」
+<div style="margin-bottom: 10px;"></div>
+</p>
 
 </html>

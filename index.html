@@ -84,15 +84,10 @@
             // キャラクターごとの文章
             const serifs = {
                 "kara": `
+        気付けばとっぷりと日が暮れ、<ruby>夕餉<rt>ゆうげ</rt></ruby>の時刻はとうに過ぎている。厨へ行けば、なにか食べ物があるだろうか。そう考えていると、障子越しに声をかけられた。
+    `,
 
-<ruby>
-  機械工場<rp>（</rp>きかいこうじょう<rp>）</rp>
-</ruby>
-
-                気付けばとっぷりと日が暮れ、<ruby>夕餉<rt>ゆうげ</rt></ruby>の時刻はとうに過ぎている。厨へ行けば、なにか食べ物があるだろうか。そう考えていると、障子越しに声をかけられた。
-                `,
-
-                "goke": `後家兼光「${userName}、今日も素敵だね。」`,
+                "goke": `後家兼光「<ruby>${userName}<rt>あるじ</rt></ruby>、今日も素敵だね。」`,
 
                 "turu": `鶴丸「よっ、${userName}！驚いたか？」`,
 
@@ -104,7 +99,7 @@
             };
 
             // 選択されたキャラクターのセリフを表示（選択なしなら空）
-            serifBox.textContent = serifs[selectedCharacter] || "";
+            serifBox.innerHTML = serifs[selectedCharacter] || "";
         }
     </script>
 

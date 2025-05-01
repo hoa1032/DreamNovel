@@ -26,10 +26,6 @@
         <option value="">-- 刀剣男士選択 --</option>
         <option value="kara">大倶利伽羅</option>
         <option value="goke">後家兼光</option>
-        <option value="turu">鶴丸</option>
-        <option value="mituyo">大典太</option>
-        <option value="tagen">薬研</option>
-        <option value="hudo">不動</option>
     </select>
 
     <div style="margin-bottom: 10px;"></div>
@@ -41,6 +37,13 @@
 
     <div>彼からの呼ばれ方</div>
     <input type="text" id="userName" placeholder="あるじ" oninput="showSerif()">
+
+    <div>毎日がんばっていることは？</div>
+    <select id="jobSelect" onchange="showSerif()">
+        <option value="work">お仕事👠</option>
+        <option value="study">お勉強🎀</option>
+        <option value="study">お嫁さん💍</option>
+    </select>
 
     <div style="margin-bottom: 10px;"></div>
 
